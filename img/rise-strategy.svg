@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" role="img" aria-labelledby="title desc">
+  <title id="title">RISE strategy milestone</title>
+  <desc id="desc">Four colorful paths rise toward a shared sustainable future.</desc>
+  <rect width="600" height="360" fill="#e1f3e8"/>
+  <path d="M0 300h600" stroke="#172333" stroke-width="4"/>
+  <path d="M85 300 210 175 300 240 470 72" fill="none" stroke="#0068b5" stroke-width="18"/>
+  <path d="M135 300 250 210 345 160 520 112" fill="none" stroke="#ff6b35" stroke-width="18"/>
+  <path d="M185 300 275 250 380 215 555 170" fill="none" stroke="#8dc63f" stroke-width="18"/>
+  <circle cx="210" cy="175" r="16" fill="#d9f56c"/><circle cx="300" cy="240" r="16" fill="#d9f56c"/><circle cx="470" cy="72" r="18" fill="#d9f56c"/>
+  <text x="48" y="78" fill="#172333" font-family="Arial" font-size="54" font-weight="700">RISE</text>
+  <text x="51" y="112" fill="#0068b5" font-family="Arial" font-size="16" letter-spacing="3">2030 GOALS</text>
+</svg>

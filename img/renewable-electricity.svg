@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" role="img" aria-labelledby="title desc">
+  <title id="title">Renewable electricity milestone</title>
+  <desc id="desc">Solar panels and a wind turbine power a bright green future.</desc>
+  <rect width="600" height="360" fill="#172333"/>
+  <circle cx="472" cy="76" r="42" fill="#d9f56c"/>
+  <path d="M0 278c120-38 178 16 287-20 128-42 204 13 313-20v122H0Z" fill="#0068b5"/>
+  <path d="M390 276V128M390 145 340 111M390 145l53-34M390 145l3 62" fill="none" stroke="#e8f4f1" stroke-width="9"/>
+  <path d="M390 128c-16-45-38-58-50-54 0 20 14 40 50 54ZM390 128c41-19 59-17 66-7-16 17-38 19-66 7ZM390 128c7 40 0 59-13 65-11-18-7-42 13-65Z" fill="#ff6b35"/>
+  <path d="M62 267 115 187l53 80Zm20-4h67M99 213l50 0M87 233h75" fill="#d9f56c" stroke="#172333" stroke-width="5"/>
+  <text x="48" y="73" fill="#d9f56c" font-family="Arial" font-size="48" font-weight="700">99%</text>
+  <text x="52" y="104" fill="#e8f4f1" font-family="Arial" font-size="15" letter-spacing="2">RENEWABLE POWER</text>
+</svg>

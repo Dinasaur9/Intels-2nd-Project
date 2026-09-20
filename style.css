@@ -1,0 +1,60 @@
+/* Basic page styles and Intel-inspired colors */
+:root { --ink: #172333; --blue: #0068b5; --cream: #f4f0e8; --orange: #ff6b35; --lime: #d9f56c; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; color: var(--ink); background: var(--cream); font-family: Arial, Helvetica, sans-serif; }
+.hero { position: relative; min-height: 620px; padding: 42px 8% 70px; overflow: hidden; color: white; background: var(--ink); }
+.hero::before { position: absolute; right: 7%; bottom: -245px; width: 510px; height: 510px; border: 1px solid rgba(217,245,108,.55); border-radius: 50%; box-shadow: 0 0 0 36px rgba(217,245,108,.08), 0 0 0 72px rgba(217,245,108,.05); content: ""; }
+.hero::after { position: absolute; top: 0; right: 20%; width: 1px; height: 78%; background: rgba(255,255,255,.16); content: ""; transform: rotate(28deg); transform-origin: top; }
+.hero-content { position: relative; z-index: 1; max-width: 790px; }
+.intel-logo { width: 86px; margin-bottom: 100px; filter: brightness(0) invert(1); }
+.eyebrow { margin: 0 0 16px; color: #bfe9ff; font-size: 12px; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; }
+h1 { max-width: 780px; margin: 0; font-size: clamp(48px, 8vw, 104px); font-weight: 800; letter-spacing: -3px; line-height: .94; }
+h1 span { color: var(--lime); }
+.hero-content > p:not(.eyebrow) { max-width: 500px; margin: 32px 0 0; color: #d8f1ff; font-size: 18px; line-height: 1.6; }
+.hero-meta { display: flex; align-items: center; gap: 14px; margin-top: 72px; color: var(--lime); font-size: 12px; letter-spacing: 1px; }
+.meta-line { display: inline-block; width: 52px; height: 3px; background: var(--orange); }
+.hero-orbit { position: absolute; right: 14%; bottom: 34px; color: var(--lime); font-size: 13px; letter-spacing: 4px; }
+.timeline-section { padding: 100px 0 80px; overflow: hidden; }
+.section-heading { width: 84%; max-width: 1180px; margin: 0 auto 54px; }
+.section-heading h2 { margin: 0 0 20px; font-size: clamp(40px, 6vw, 72px); letter-spacing: -2px; line-height: .98; }
+.section-heading h2 em { color: var(--orange); font-style: normal; }
+.section-heading > p:last-child { max-width: 420px; margin: 0; color: #64717c; line-height: 1.6; }
+/* Flexbox keeps the timeline easy to understand and lets it scroll on desktop. */
+.timeline { display: flex; gap: 20px; width: 84%; max-width: 1180px; margin: 0 auto; padding: 12px 4px 30px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-color: var(--blue) #dce5e8; scrollbar-width: thin; }
+.milestone-card { position: relative; flex: 0 0 300px; min-height: 390px; overflow: hidden; border: 1px solid #d7e0e2; background: white; box-shadow: 0 8px 24px rgba(23,35,51,.08); scroll-snap-align: start; transition: transform .35s ease, box-shadow .35s ease; }
+.milestone-card:nth-child(even) { margin-top: 38px; background: #e1f3e8; }
+.milestone-card:nth-child(3n) { background: #e0edf7; }
+.milestone-card:hover, .milestone-card:focus-within { transform: translateY(-10px); box-shadow: 0 18px 34px rgba(23,35,51,.18); }
+.card-image { height: 175px; overflow: hidden; background: #dcebf0; }
+.card-image img { width: 100%; height: 100%; object-fit: cover; transition: transform .55s ease; }
+.milestone-card:hover .card-image img, .milestone-card:focus-within .card-image img { transform: scale(1.08); }
+.card-body { padding: 24px; }
+.year { margin: 0 0 12px; color: var(--orange); font-size: 14px; font-weight: bold; letter-spacing: 1px; }
+.card-body h3 { min-height: 52px; margin: 0; color: var(--ink); font-size: 23px; line-height: 1.1; }
+.card-detail { max-height: 0; margin: 0; overflow: hidden; color: #60727c; font-size: 14px; line-height: 1.55; opacity: 0; transition: max-height .45s ease, margin .45s ease, opacity .45s ease; }
+.milestone-card:hover .card-detail, .milestone-card:focus-within .card-detail { max-height: 130px; margin-top: 16px; opacity: 1; }
+.featured-card { border-top: 4px solid var(--orange); }
+.timeline-hint { width: 84%; margin: 22px auto 0; color: #73818a; font-size: 12px; letter-spacing: .5px; text-transform: uppercase; }
+.timeline-hint span:first-child { margin-right: 8px; color: var(--orange); font-size: 20px; vertical-align: -2px; }
+.hint-divider { padding: 0 8px; color: #b6c2c6; }
+footer { display: flex; justify-content: space-between; padding: 24px 8%; color: #7c8b91; border-top: 1px solid #d7e0e2; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; }
+footer span:first-child { color: var(--blue); font-weight: bold; }
+@media (max-width: 650px) {
+	.hero { min-height: 590px; padding: 28px 8% 52px; }
+	.intel-logo { margin-bottom: 82px; }
+	h1 { font-size: 53px; letter-spacing: -2px; }
+	.hero-content > p:not(.eyebrow) { font-size: 16px; }
+	.hero-meta { margin-top: 50px; }
+	.hero-orbit { right: 10%; bottom: 26px; }
+	.timeline-section { padding: 68px 0 50px; }
+	.section-heading { margin-bottom: 34px; }
+	.section-heading h2 { font-size: 46px; }
+	.timeline { display: block; width: 84%; padding: 0; overflow: visible; }
+	.milestone-card, .milestone-card:nth-child(even) { min-height: 0; margin-top: 0; margin-bottom: 22px; }
+	.card-image { height: 200px; }
+	.card-detail { max-height: 130px; margin-top: 16px; opacity: 1; }
+	.timeline-hint { width: 84%; line-height: 1.8; }
+	footer { display: block; line-height: 2; }
+	footer span { margin-right: 12px; }
+}

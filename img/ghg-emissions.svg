@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" role="img" aria-labelledby="title desc">
+  <title id="title">Greenhouse gas emissions milestone</title>
+  <desc id="desc">A factory skyline with emissions turning into a green leaf.</desc>
+  <rect width="600" height="360" fill="#172333"/>
+  <circle cx="470" cy="88" r="42" fill="#d9f56c"/>
+  <path d="M470 88c-30 6-42 23-42 42 29 2 45-13 42-42Z" fill="#0068b5"/>
+  <path d="M0 286h600v74H0z" fill="#ff6b35"/>
+  <path d="M70 286V175h72v111M172 286V130h88v156M290 286V202h66v84M386 286V154h82v132" fill="#dfe9ee"/>
+  <path d="M95 175v-49h22v49M212 130V78h23v52M417 154v-52h22v52" fill="#dfe9ee"/>
+  <path d="M106 82c14-28 45-37 66-22-7 30-35 42-66 22Z" fill="#d9f56c"/>
+  <path d="M139 106c10-31 31-48 60-48-2 30-23 49-60 48Z" fill="#8dc63f"/>
+  <path d="M139 106c4-19 13-34 28-48" fill="none" stroke="#172333" stroke-width="6"/>
+  <circle cx="78" cy="218" r="11" fill="#0068b5"/><circle cx="512" cy="204" r="15" fill="#0068b5"/>
+</svg>
