@@ -1,12 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Intel: Sustainability Through the Ages</title>
+  <!-- Bootstrap supplies the responsive row and column classes used below. -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <!-- This link helps keyboard users skip repeated navigation content. -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
   <!-- Header / Hero Section -->
   <header class="hero">
@@ -26,11 +32,18 @@
       </p>
       <div class="hero-meta"><span class="meta-line"></span><span>1968 — 2040</span></div>
     </div>
+    <div class="hero-tools">
+      <label for="language-select">Language</label>
+      <select id="language-select" class="form-select form-select-sm" aria-label="Choose language">
+        <option value="en" selected>English</option>
+        <option value="ar">العربية</option>
+      </select>
+    </div>
     <div class="hero-orbit" aria-hidden="true">01</div>
   </header>
 
   <!-- Timeline Cards Section -->
-  <main>
+  <main id="main-content">
   <section class="timeline-section" aria-labelledby="timeline-title">
     <div class="section-heading">
       <p class="eyebrow">The long view</p>
@@ -83,7 +96,298 @@
     </div>
     <p class="timeline-hint"><span>→</span> Scroll to explore <span class="hint-divider">·</span> Hover to reveal details</p>
   </section>
+
+  <!-- Bootstrap's row and col classes make this section responsive. -->
+  <section class="impact-section" aria-labelledby="impact-title">
+    <div class="container">
+      <div class="section-heading impact-heading">
+        <p class="eyebrow">Make an impact</p>
+        <h2 id="impact-title">Progress needs <em>everyone.</em></h2>
+        <p>Discover how thoughtful choices, practical innovation, and shared knowledge can support a more sustainable technology industry.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-12 col-md-4">
+          <article class="impact-card h-100">
+            <i class="bi bi-globe2 impact-icon" aria-hidden="true"></i>
+            <h3>Global perspective</h3>
+            <p>Learn how regional voices and local partnerships shape meaningful climate action.</p>
+            <a class="btn btn-outline-primary" href="#newsletter">Learn more <span aria-hidden="true">→</span></a>
+          </article>
+        </div>
+        <div class="col-12 col-md-4">
+          <article class="impact-card h-100">
+            <i class="bi bi-droplet-half impact-icon" aria-hidden="true"></i>
+            <h3>Responsible resources</h3>
+            <p>Explore ideas for using energy, water, and materials more thoughtfully.</p>
+            <a class="btn btn-outline-primary" href="#newsletter">Learn more <span aria-hidden="true">→</span></a>
+          </article>
+        </div>
+        <div class="col-12 col-md-4">
+          <article class="impact-card h-100">
+            <i class="bi bi-lightbulb impact-icon" aria-hidden="true"></i>
+            <h3>Shared innovation</h3>
+            <p>Stay connected to new approaches that can move the whole industry forward.</p>
+            <a class="btn btn-outline-primary" href="#newsletter">Learn more <span aria-hidden="true">→</span></a>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The form uses visible labels, a required email, and a live confirmation message. -->
+  <section class="newsletter-section" id="newsletter" aria-labelledby="newsletter-title">
+    <div class="newsletter-inner">
+      <div>
+        <p class="eyebrow">Stay in the loop</p>
+        <h2 id="newsletter-title">Sustainability, delivered.</h2>
+        <p>Get occasional updates about Intel's sustainability work and the people moving it forward.</p>
+      </div>
+      <form id="newsletter-form" class="newsletter-form" novalidate>
+        <div>
+          <label for="email">Email address</label>
+          <input type="email" id="email" name="email" class="form-control" autocomplete="email" placeholder="you@example.com" required />
+          <div class="invalid-feedback">Please enter a valid email address.</div>
+        </div>
+        <button class="btn subscribe-button" type="submit">Subscribe <span aria-hidden="true">→</span></button>
+        <p class="form-note">By subscribing, you agree to receive sustainability news from Intel.</p>
+        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Bootstrap accordion adds an expandable FAQ for visitors who want more detail. -->
+  <section class="faq-section" aria-labelledby="faq-title">
+    <div class="container faq-container">
+      <p class="eyebrow">Common questions</p>
+      <h2 id="faq-title">Sustainability in focus.</h2>
+      <div class="accordion" id="sustainability-faq">
+        <div class="accordion-item">
+          <h3 class="accordion-header" id="faq-heading-one">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq-answer-one" aria-expanded="true" aria-controls="faq-answer-one">What is Intel's RISE strategy?</button>
+          </h3>
+          <div id="faq-answer-one" class="accordion-collapse collapse show" aria-labelledby="faq-heading-one" data-bs-parent="#sustainability-faq">
+            <div class="accordion-body">RISE stands for Responsible, Inclusive, Sustainable, and Enabling. It guides Intel's goals for climate action, water stewardship, waste reduction, and inclusion.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h3 class="accordion-header" id="faq-heading-two">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-answer-two" aria-expanded="false" aria-controls="faq-answer-two">When is Intel targeting net-zero operations?</button>
+          </h3>
+          <div id="faq-answer-two" class="accordion-collapse collapse" aria-labelledby="faq-heading-two" data-bs-parent="#sustainability-faq">
+            <div class="accordion-body">Intel has committed to achieving net-zero greenhouse gas emissions across its global operations by 2040.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h3 class="accordion-header" id="faq-heading-three">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-answer-three" aria-expanded="false" aria-controls="faq-answer-three">How can I stay informed?</button>
+          </h3>
+          <div id="faq-answer-three" class="accordion-collapse collapse" aria-labelledby="faq-heading-three" data-bs-parent="#sustainability-faq">
+            <div class="accordion-body">Subscribe to the sustainability newsletter above for occasional updates about Intel's progress and initiatives.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   </main>
-  <footer><span>INTEL</span> Sustainability in motion <span>© 2024</span></footer>
+  <footer>
+    <span>INTEL</span>
+    <span>Sustainability in motion</span>
+    <nav aria-label="Footer navigation">
+      <a href="#newsletter">Privacy policy</a>
+      <a href="#newsletter">Terms of use</a>
+      <a href="#newsletter">Contact</a>
+    </nav>
+    <span>© 2024</span>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Keep the page content and accessibility labels in both supported languages.
+    const translations = {
+      en: {
+        skip: 'Skip to main content',
+        language: 'Language',
+        chooseLanguage: 'Choose language',
+        heroEyebrow: 'A timeline of progress',
+        heroTitle: 'Building a more <span>sustainable</span> future.',
+        heroDescription: 'Explore the moments, ideas, and commitments that continue to shape a more responsible future for technology and our planet.',
+        timelineEyebrow: 'The long view',
+        timelineTitle: 'Small steps.<br /><em>Lasting impact.</em>',
+        timelineDescription: "Scroll through Intel's story and see how innovation can move an entire industry forward.",
+        cardTitles: ['Peak GHG Emissions', 'RISE Strategy', 'Net-Zero By 2040', 'Renewable Electricity'],
+        cardDetails: [
+          "This year marks Intel's highest annual greenhouse gas emissions for operations. Over subsequent years, Intel invests heavily in chemical abatement, renewable energy, and energy-efficient manufacturing to reverse this trend.",
+          'Intel launches its RISE (Responsible, Inclusive, Sustainable, Enabling) strategy and 2030 goals, aiming to drive industry-wide progress on climate action, water stewardship, and waste reduction.',
+          'Intel announces its commitment to achieve net-zero greenhouse gas emissions (Scope 1 and 2) across its global operations by 2040, building on years of environmental initiatives.',
+          "The company achieves 99% renewable electricity usage worldwide, helping to drastically lower carbon emissions and driving progress toward Intel's long-term sustainability goals."
+        ],
+        imageAlts: ['Factory skyline and leaf representing greenhouse gas reduction', 'Four rising paths representing Intel RISE strategy goals', 'Blue orbit around a green planet representing net-zero emissions', 'Solar panel and wind turbine representing renewable electricity'],
+        years: ['2006', '2020', '2022', '2023'],
+        dateRange: '1968 — 2040',
+        orbitNumber: '01',
+        copyright: '© 2024',
+        timelineHint: '<span>→</span> Scroll to explore <span class="hint-divider">·</span> Hover to reveal details',
+        impactEyebrow: 'Make an impact',
+        impactTitle: 'Progress needs <em>everyone.</em>',
+        impactDescription: 'Discover how thoughtful choices, practical innovation, and shared knowledge can support a more sustainable technology industry.',
+        impactTitles: ['Global perspective', 'Responsible resources', 'Shared innovation'],
+        impactDetails: ['Learn how regional voices and local partnerships shape meaningful climate action.', 'Explore ideas for using energy, water, and materials more thoughtfully.', 'Stay connected to new approaches that can move the whole industry forward.'],
+        learnMore: 'Learn more',
+        newsletterEyebrow: 'Stay in the loop',
+        newsletterTitle: 'Sustainability, delivered.',
+        newsletterDescription: "Get occasional updates about Intel's sustainability work and the people moving it forward.",
+        emailLabel: 'Email address',
+        emailPlaceholder: 'you@example.com',
+        invalidEmail: 'Please enter a valid email address.',
+        subscribe: 'Subscribe',
+        formNote: 'By subscribing, you agree to receive sustainability news from Intel.',
+        success: 'Thanks for subscribing. Please check your inbox to confirm.',
+        footerNavigation: 'Footer navigation',
+        footerTagline: 'Sustainability in motion',
+        privacy: 'Privacy policy',
+        terms: 'Terms of use',
+        contact: 'Contact',
+        faqEyebrow: 'Common questions',
+        faqTitle: 'Sustainability in focus.',
+        faqQuestions: ["What is Intel's RISE strategy?", 'When is Intel targeting net-zero operations?', 'How can I stay informed?'],
+        faqAnswers: [
+          "RISE stands for Responsible, Inclusive, Sustainable, and Enabling. It guides Intel's goals for climate action, water stewardship, waste reduction, and inclusion.",
+          'Intel has committed to achieving net-zero greenhouse gas emissions across its global operations by 2040.',
+          "Subscribe to the sustainability newsletter above for occasional updates about Intel's progress and initiatives."
+        ]
+      },
+      ar: {
+        skip: 'انتقل إلى المحتوى الرئيسي',
+        language: 'اللغة',
+        chooseLanguage: 'اختر اللغة',
+        heroEyebrow: 'مسيرة من التقدم',
+        heroTitle: 'نبني مستقبلًا أكثر <span>استدامة.</span>',
+        heroDescription: 'استكشف اللحظات والأفكار والالتزامات التي تواصل تشكيل مستقبل أكثر مسؤولية للتكنولوجيا وكوكبنا.',
+        timelineEyebrow: 'نظرة شاملة',
+        timelineTitle: 'خطوات صغيرة.<br /><em>تأثير مستمر.</em>',
+        timelineDescription: 'تصفح مسيرة إنتل واكتشف كيف يمكن للابتكار أن يدفع صناعة بأكملها إلى الأمام.',
+        cardTitles: ['ذروة انبعاثات غازات الدفيئة', 'استراتيجية RISE', 'صافي انبعاثات صفري بحلول ٢٠٤٠', 'الكهرباء المتجددة'],
+        cardDetails: [
+          'يمثل هذا العام أعلى مستوى سنوي لانبعاثات غازات الدفيئة الناتجة عن عمليات إنتل. وفي السنوات التالية، استثمرت إنتل بكثافة في الحد من المواد الكيميائية والطاقة المتجددة والتصنيع الموفر للطاقة لعكس هذا الاتجاه.',
+          'أطلقت إنتل استراتيجية RISE، وهي استراتيجية مسؤولة وشاملة ومستدامة وتمكينية، إلى جانب أهداف ٢٠٣٠ لدفع التقدم في العمل المناخي والحفاظ على المياه وتقليل النفايات على مستوى الصناعة.',
+          'أعلنت إنتل التزامها بتحقيق صافي انبعاثات صفري من غازات الدفيئة، ضمن النطاقين ١ و٢، في عملياتها العالمية بحلول عام ٢٠٤٠، استنادًا إلى سنوات من المبادرات البيئية.',
+          'حققت الشركة استخدام ٩٩٪ من الكهرباء المتجددة حول العالم، مما يساعد على خفض انبعاثات الكربون ودعم أهداف إنتل طويلة المدى في مجال الاستدامة.'
+        ],
+        imageAlts: ['أفق مصنع وورقة شجر يمثلان خفض انبعاثات غازات الدفيئة', 'مسارات صاعدة تمثل أهداف استراتيجية RISE من إنتل', 'مدار أزرق حول كوكب أخضر يمثل صافي الانبعاثات الصفري', 'لوح شمسي وتوربين رياح يمثلان الكهرباء المتجددة'],
+        years: ['٢٠٠٦', '٢٠٢٠', '٢٠٢٢', '٢٠٢٣'],
+        dateRange: '١٩٦٨ — ٢٠٤٠',
+        orbitNumber: '٠١',
+        copyright: '© ٢٠٢٤',
+        timelineHint: '<span>←</span> مرر لاستكشاف المحتوى <span class="hint-divider">·</span> مرر المؤشر لعرض التفاصيل',
+        impactEyebrow: 'اصنع أثرًا',
+        impactTitle: 'التقدم يحتاج إلى <em>الجميع.</em>',
+        impactDescription: 'اكتشف كيف يمكن للاختيارات الواعية والابتكار العملي والمعرفة المشتركة دعم صناعة تكنولوجيا أكثر استدامة.',
+        impactTitles: ['منظور عالمي', 'موارد مسؤولة', 'ابتكار مشترك'],
+        impactDetails: ['تعرّف على كيفية مساهمة الأصوات الإقليمية والشراكات المحلية في العمل المناخي المؤثر.', 'استكشف أفكارًا لاستخدام الطاقة والمياه والمواد بطريقة أكثر مسؤولية.', 'ابقَ على اطلاع بالأساليب الجديدة التي يمكن أن تدفع الصناعة بأكملها إلى الأمام.'],
+        learnMore: 'اعرف المزيد',
+        newsletterEyebrow: 'ابقَ على اطلاع',
+        newsletterTitle: 'الاستدامة، تصلك مباشرة.',
+        newsletterDescription: 'احصل على تحديثات دورية حول أعمال إنتل في مجال الاستدامة والأشخاص الذين يقودونها.',
+        emailLabel: 'عنوان البريد الإلكتروني',
+        emailPlaceholder: 'you@example.com',
+        invalidEmail: 'يرجى إدخال عنوان بريد إلكتروني صالح.',
+        subscribe: 'اشترك',
+        formNote: 'بالاشتراك، توافق على تلقي أخبار الاستدامة من إنتل.',
+        success: 'شكرًا لاشتراكك. يرجى مراجعة صندوق الوارد لتأكيد الاشتراك.',
+        footerNavigation: 'روابط التذييل',
+        footerTagline: 'الاستدامة في حركة',
+        privacy: 'سياسة الخصوصية',
+        terms: 'شروط الاستخدام',
+        contact: 'اتصل بنا',
+        faqEyebrow: 'أسئلة شائعة',
+        faqTitle: 'الاستدامة موضع اهتمام.',
+        faqQuestions: ['ما استراتيجية RISE من إنتل؟', 'متى تستهدف إنتل تحقيق صافي انبعاثات صفري في عملياتها؟', 'كيف يمكنني البقاء على اطلاع؟'],
+        faqAnswers: [
+          'تشير RISE إلى المسؤولية والشمول والاستدامة والتمكين. وتوجه هذه المبادئ أهداف إنتل في العمل المناخي والحفاظ على المياه وتقليل النفايات والشمول.',
+          'التزمت إنتل بتحقيق صافي انبعاثات صفري من غازات الدفيئة في عملياتها العالمية بحلول عام ٢٠٤٠.',
+          'اشترك في النشرة الإخبارية للاستدامة أعلاه للحصول على تحديثات دورية حول تقدم إنتل ومبادراتها.'
+        ]
+      }
+    };
+
+    const languageSelect = document.querySelector('#language-select');
+    const newsletterForm = document.querySelector('#newsletter-form');
+    const emailInput = document.querySelector('#email');
+    const formStatus = document.querySelector('#form-status');
+
+    function applyLanguage(language) {
+      const text = translations[language];
+      const isArabic = language === 'ar';
+      const learnMoreArrow = isArabic ? '←' : '→';
+      document.documentElement.lang = language;
+      document.documentElement.dir = isArabic ? 'rtl' : 'ltr';
+      document.title = isArabic ? 'إنتل: الاستدامة عبر الزمن' : 'Intel: Sustainability Through the Ages';
+      document.querySelector('.skip-link').textContent = text.skip;
+      document.querySelector('.hero-tools label').textContent = text.language;
+      languageSelect.setAttribute('aria-label', text.chooseLanguage);
+      document.querySelectorAll('.hero-content .eyebrow')[0].textContent = text.heroEyebrow;
+      document.querySelector('h1').innerHTML = text.heroTitle;
+      document.querySelector('.hero-content > p:not(.eyebrow)').textContent = text.heroDescription;
+      document.querySelector('.hero-meta span:last-child').textContent = text.dateRange;
+      document.querySelector('.hero-orbit').textContent = text.orbitNumber;
+      document.querySelector('.timeline-section .eyebrow').textContent = text.timelineEyebrow;
+      document.querySelector('#timeline-title').innerHTML = text.timelineTitle;
+      document.querySelector('.timeline-section .section-heading > p:last-child').textContent = text.timelineDescription;
+      document.querySelector('.timeline-hint').innerHTML = text.timelineHint;
+
+      document.querySelectorAll('.milestone-card').forEach((card, index) => {
+        card.querySelector('.year').textContent = text.years[index];
+        card.querySelector('h3').textContent = text.cardTitles[index];
+        card.querySelector('.card-detail').textContent = text.cardDetails[index];
+        card.querySelector('img').alt = text.imageAlts[index];
+      });
+
+      document.querySelector('.impact-section .eyebrow').textContent = text.impactEyebrow;
+      document.querySelector('#impact-title').innerHTML = text.impactTitle;
+      document.querySelector('.impact-heading > p:last-child').textContent = text.impactDescription;
+      document.querySelectorAll('.impact-card').forEach((card, index) => {
+        card.querySelector('h3').textContent = text.impactTitles[index];
+        card.querySelector('p').textContent = text.impactDetails[index];
+        card.querySelector('a').innerHTML = `${text.learnMore} <span aria-hidden="true">${learnMoreArrow}</span>`;
+      });
+
+      document.querySelector('.newsletter-section .eyebrow').textContent = text.newsletterEyebrow;
+      document.querySelector('#newsletter-title').textContent = text.newsletterTitle;
+      document.querySelector('.newsletter-inner > div:first-child > p:last-child').textContent = text.newsletterDescription;
+      document.querySelector('label[for="email"]').textContent = text.emailLabel;
+      emailInput.placeholder = isArabic ? 'بريدك@example.com' : text.emailPlaceholder;
+      document.querySelector('.invalid-feedback').textContent = text.invalidEmail;
+      document.querySelector('.subscribe-button').innerHTML = `${text.subscribe} <span aria-hidden="true">${learnMoreArrow}</span>`;
+      document.querySelector('.form-note').textContent = text.formNote;
+      document.querySelector('footer nav').setAttribute('aria-label', text.footerNavigation);
+      document.querySelector('footer span:nth-of-type(2)').textContent = text.footerTagline;
+      document.querySelector('footer nav a:nth-child(1)').textContent = text.privacy;
+      document.querySelector('footer nav a:nth-child(2)').textContent = text.terms;
+      document.querySelector('footer nav a:nth-child(3)').textContent = text.contact;
+      document.querySelector('footer span:last-child').textContent = text.copyright;
+      document.querySelector('.faq-section .eyebrow').textContent = text.faqEyebrow;
+      document.querySelector('#faq-title').textContent = text.faqTitle;
+      document.querySelectorAll('.accordion-button').forEach((button, index) => {
+        button.textContent = text.faqQuestions[index];
+      });
+      document.querySelectorAll('.accordion-body').forEach((answer, index) => {
+        answer.textContent = text.faqAnswers[index];
+      });
+      if (formStatus.textContent) formStatus.textContent = text.success;
+    }
+
+    languageSelect.addEventListener('change', (event) => applyLanguage(event.target.value));
+
+    newsletterForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+      newsletterForm.classList.add('was-validated');
+      if (!newsletterForm.checkValidity()) {
+        emailInput.focus();
+        return;
+      }
+      formStatus.textContent = translations[document.documentElement.lang].success;
+      newsletterForm.reset();
+      newsletterForm.classList.remove('was-validated');
+    });
+  </script>
 </body>
 </html>
